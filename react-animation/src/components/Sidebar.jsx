@@ -1,16 +1,41 @@
 import '../Sidebar.css'
 
-function Nav() {
+function Sidebar({ mudarPagina }) {
   return (
     <nav className="nav-fixo">
       <ul className="nav-lista">
-        <li className="nav-item"><a href="app.jsx">🏠 Introdução</a></li>
-        <li className="nav-item"><a href="#slide">Slide</a></li>
-        <li className="nav-item"><a href="#zoom">Zoom</a></li>
-        <li className="nav-item"><a href="#rotate">Rotate</a></li>
+
+        <li
+          className="nav-item"
+          onClick={() => mudarPagina('introducao')}
+        >
+          🏠 Introdução
+        </li>
+
+        <li
+          className="nav-item"
+          onClick={() => mudarPagina('texto-Rotativo')}
+        >
+          texto Rotativo
+        </li>
+
+        <li
+          className="nav-item"
+          onClick={() => mudarPagina('zoom')}
+        >
+          Zoom
+        </li>
+
+        <li
+          className="nav-item"
+          onClick={() => mudarPagina('rotate')}
+        >
+          Rotate
+        </li>
+
       </ul>
     </nav>
   )
 }
 
-export default Nav
+export default Sidebar
