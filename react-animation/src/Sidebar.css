@@ -1,0 +1,62 @@
+.nav-fixo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #0f172a; 
+    display: flex;
+    flex-direction: column;
+    padding: 40px 24px;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.25);
+    padding-top: 9%;
+}
+
+/* Lista */
+.nav-lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Item */
+.nav-item {
+    position: relative;
+}
+
+/* Link */
+.nav-item a {
+    text-decoration: none;
+    color: #cbd5f5;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    padding-left: 14px;
+    transition: color 0.3s ease;
+}
+
+/* Linha lateral (invisível por padrão) */
+.nav-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 0%;
+    background-color: #38bdf8;
+    border-radius: 4px;
+    transition: height 0.3s ease;
+}
+
+/* Hover elegante */
+.nav-item:hover a {
+    color: #ffffff;
+}
+
+.nav-item:hover::before {
+    height: 70%;
+}
