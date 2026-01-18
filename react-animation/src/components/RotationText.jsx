@@ -10,9 +10,9 @@ function RotatingText({ texts, interval = 2000 }) {
       setVisible(false)
 
       setTimeout(() => {
-        setIndex((prev) => (prev + 1) % texts.length)
+        setIndex((prev) => (prev + 1) % texts.length) 
         setVisible(true)
-      }, 400)
+      },400) 
     }, interval)
 
     return () => clearInterval(timer)

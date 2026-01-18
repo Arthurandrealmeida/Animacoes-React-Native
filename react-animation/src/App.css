@@ -18,9 +18,8 @@ body {
   align-items: center;
   width: 100%;
   padding: 80px 0 0 0;
-  margin-left: -70px;
-
 }
+
 
 .P-introduçao {
   width: 60%;
@@ -40,4 +39,37 @@ body {
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-top: -10px;
+}
+
+.H1-elemento-1 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  color:#7bdeeb
+}
+
+.div-texto-rotativo {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100vb;
+  text-align: center;
+  align-items: center;
+}
+
+.linha-texto-rotativo {
+  display: flex;
+  gap: 12px; /* espaço entre texto e animação */
+  font-size: 2rem;
+}
+
+.texto-fixo {
+  color: #7bdeeb;
+  font-weight: 600;
+}
+
+.Caixinha-texto-rotativo {
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  background-color: #20232a;
 }

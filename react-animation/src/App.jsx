@@ -52,11 +52,17 @@ function App() {
           {/* texto Rotativo */} 
           {paginaAtual === 'texto-Rotativo' && ( 
             <>
-              <h1>Rotating Text Animation</h1>
-              <p>Aqui vai sua animação de texto rotativo.</p> 
+            <div className='div-texto-rotativo'>
+              <h1 className='H1-elemento-1'>Rotating Text Animation</h1>
+              <p>Animação de Texto Rotativo.</p> 
 
-                  <RotatingText texts={['React', 'Bits', 'Is', 'Cool!']} />
-
+            <div className="Caixinha-texto-rotativo">
+                <div className="linha-texto-rotativo">
+                  <span className="texto-fixo">Programador</span>
+                    <RotatingText texts={['Pensativo', 'Competitivo', 'Criativo', 'legal!']} />
+                </div>
+              </div>
+            </div>
             </>
           )}
 
