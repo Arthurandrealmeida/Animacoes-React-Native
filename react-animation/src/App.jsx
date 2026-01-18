@@ -67,7 +67,7 @@ function App() {
           )}
 
           {/* ZOOM */}
-          {paginaAtual === 'zoom' && (
+          {paginaAtual === 'text-reload' && (
             <>
               <h1>Zoom Animation</h1>
               <p>Aqui vai sua animação de zoom.</p>

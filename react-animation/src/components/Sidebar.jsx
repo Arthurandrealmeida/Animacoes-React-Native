@@ -16,14 +16,14 @@ function Sidebar({ mudarPagina }) {
           className="nav-item"
           onClick={() => mudarPagina('texto-Rotativo')}
         >
-          texto Rotativo
+          Texto Rotativo
         </li>
 
         <li
           className="nav-item"
-          onClick={() => mudarPagina('zoom')}
+          onClick={() => mudarPagina('text-reload')}
         >
-          Zoom
+          Texto Recarregado
         </li>
 
         <li
