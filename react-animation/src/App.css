@@ -73,3 +73,9 @@ body {
   margin-top: 20px;
   background-color: #20232a;
 }
+
+.btn-cta {
+  font-weight: bold;
+  margin-top: 15px;
+  width: 100%;
+}

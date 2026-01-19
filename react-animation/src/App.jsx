@@ -2,12 +2,19 @@ import { useState } from 'react'
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
 import RotatingText from './components/RotationText'
+import SplitText from './components/textReload'
 import './App.css'
+
+const handleAnimationComplete = () => {
+  console.log('Animação finalizada');
+};
 
 function App() {
 
   // 🔹 Estado que controla qual página está ativa
   const [paginaAtual, setPaginaAtual] = useState('introducao')
+  const [reloadKey, setReloadKey] = useState(0);
+
 
   return (
     <>
@@ -66,13 +73,42 @@ function App() {
             </>
           )}
 
-          {/* ZOOM */}
           {paginaAtual === 'text-reload' && (
-            <>
-              <h1>Zoom Animation</h1>
-              <p>Aqui vai sua animação de zoom.</p>
-            </>
+            <div className='div-texto-rotativo'>
+              <h1 className='H1-elemento-1'>Texto recarregado</h1>
+              <p>Animação de Texto reload.</p> 
+
+              <div className="Caixinha-texto-rotativo">
+                <SplitText
+                  key={reloadKey}
+                  text="Hello, you!"
+                  className="text-2xl font-semibold text-center"
+                  delay={50}
+                  duration={1.25}
+                  ease="power3.out"
+                  splitType="chars"
+                  from={{ opacity: 0, y: 40 }}
+                  to={{ opacity: 1, y: 0 }}
+                  threshold={0.1}
+                  rootMargin="-100px"
+                  textAlign="center"
+                  onLetterAnimationComplete={handleAnimationComplete}
+                />
+
+
+                <button
+                  className="btn-cta"
+                  onClick={() => setReloadKey(prev => prev + 1)}
+                >
+                  Recomeçar animação
+                </button>
+
+              </div>
+
+            </div>
           )}
+
+
 
           {/* ROTATE */}
           {paginaAtual === 'rotate' && (

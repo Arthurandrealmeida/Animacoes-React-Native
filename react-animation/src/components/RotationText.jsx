@@ -1,7 +1,12 @@
 import { useEffect, useState } from 'react'
 import '../RotationText.css'
 
-function RotatingText({ texts, interval = 2000 }) {
+function RotatingText({
+  texts,
+  interval = 2000,
+  exitDuration = 200,
+  enterDelay = 50
+}) {
   const [index, setIndex] = useState(0)
   const [visible, setVisible] = useState(true)
 
@@ -10,13 +15,13 @@ function RotatingText({ texts, interval = 2000 }) {
       setVisible(false)
 
       setTimeout(() => {
-        setIndex((prev) => (prev + 1) % texts.length) 
+        setIndex((prev) => (prev + 1) % texts.length)
         setVisible(true)
-      },400) 
+      }, exitDuration + enterDelay)
     }, interval)
 
     return () => clearInterval(timer)
-  }, [texts, interval])
+  }, [texts, interval, exitDuration, enterDelay])
 
   return (
     <span className={`rotate-text ${visible ? 'show' : 'hide'}`}>
